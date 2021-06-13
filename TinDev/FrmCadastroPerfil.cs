@@ -117,6 +117,7 @@ namespace TinDev
             finally
             {
                 sqlcon.Close();
+                this.Close();
             }
         }
 
@@ -158,7 +159,18 @@ namespace TinDev
             finally
             {
                 sqlcon.Close();
+                this.Close();
             }
+        }
+
+        private void btnCadastrarDev_Click(object sender, EventArgs e)
+        {
+            InserirDev();
+        }
+
+        private void btnCancelarContratante_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

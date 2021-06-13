@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static TinDev.frmLogin;
 
 namespace TinDev
 {
@@ -58,11 +59,11 @@ namespace TinDev
 
             if (rdbInformaContratante.Checked)
             {
-                comando.Parameters.Add("@CONTRATANTE", SqlDbType.Int).Value = 1;
+                comando.Parameters.Add("@CONTRATANTE", SqlDbType.Int).Value = Sessao.Instance.CodUsuario;
             }
             else if (rdbNaoInformaContratante.Checked)
             {
-                comando.Parameters.Add("@CONTRATANTE", SqlDbType.Int).Value = 2;
+                comando.Parameters.Add("@CONTRATANTE", SqlDbType.Int).Value = Sessao.Instance.CodUsuario;
             }
 
             try

@@ -5,24 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static TinDev.frmLogin;
 
 namespace TinDev
 {
     public partial class FrmMenuPrincipal : Form
     {
-        public string NomeUsuario;
-        public string PerfilUsuario;
-
-        public string FNomeUsuario
-        {
-            set { NomeUsuario = value; }
-        }
-
-        public string FPerfilUsuario
-        {
-            set { PerfilUsuario = value; }
-        }
-
         public FrmMenuPrincipal()
         {
             InitializeComponent();
@@ -30,12 +18,12 @@ namespace TinDev
 
         public void CarregarTela()
         {
-            lblUsuario.Text = NomeUsuario;
-            lblPerfilUsuario.Text = PerfilUsuario;
+            lblUsuario.Text = Sessao.Instance.NomeUsuario;
+            lblPerfilUsuario.Text = Sessao.Instance.PerfilUsuario;
 
             Size = new Size(1024, 408);
 
-            if (PerfilUsuario == "DEV")
+            if (Sessao.Instance.PerfilUsuario == "DEV")
             {
                 pnlMenuPrincipalContratante.Visible = false;
                 pnlMenuPrincipalContratante.Dock = DockStyle.None;
