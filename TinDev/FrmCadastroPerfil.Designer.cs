@@ -228,6 +228,7 @@ namespace TinDev
             this.btnCadastrarDev.TabIndex = 10;
             this.btnCadastrarDev.Text = "Cadastrar";
             this.btnCadastrarDev.UseVisualStyleBackColor = true;
+            this.btnCadastrarDev.Click += new System.EventHandler(this.btnCadastrarDev_Click);
             // 
             // groupBox1
             // 
@@ -343,6 +344,7 @@ namespace TinDev
             this.btnCancelarContratante.TabIndex = 9;
             this.btnCancelarContratante.Text = "Cancelar";
             this.btnCancelarContratante.UseVisualStyleBackColor = true;
+            this.btnCancelarContratante.Click += new System.EventHandler(this.btnCancelarContratante_Click);
             // 
             // btnCadastrarContratante
             // 
