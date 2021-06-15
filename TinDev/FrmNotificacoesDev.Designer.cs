@@ -61,7 +61,6 @@ namespace TinDev
             this.dtgNotificacao.RowTemplate.Height = 25;
             this.dtgNotificacao.Size = new System.Drawing.Size(709, 223);
             this.dtgNotificacao.TabIndex = 1;
-            this.dtgNotificacao.Visible = false;
             // 
             // FrmNotificacoesDev
             // 
@@ -73,6 +72,7 @@ namespace TinDev
             this.Name = "FrmNotificacoesDev";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notificações";
+            this.Load += new System.EventHandler(this.FrmNotificacoesDev_Load);
             this.Resize += new System.EventHandler(this.FrmNotificacoesDev_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dtgNotificacao)).EndInit();
             this.ResumeLayout(false);
