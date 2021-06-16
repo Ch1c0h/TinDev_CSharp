@@ -1,7 +1,15 @@
-﻿
-namespace minhatela
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using static TinDev.frmLogin;
+
+namespace TinDev
 {
-    partial class Form1
+    public partial class FrmVisualizarVagasDev : Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -191,9 +199,9 @@ namespace minhatela
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "FrmVisualizarVagasDev";
+            this.Text = "FrmVisualizarVagasDev";
+            this.Load += new System.EventHandler(this.FrmVisualizarVagasDev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

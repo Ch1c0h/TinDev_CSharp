@@ -9,16 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace minhatela
+namespace TinDev
 {
-    public partial class Form1 : Form
+    public partial class FrmVisualizarVagasDev : Form
     {
-        SqlConnection conexao = new SqlConnection(@"Server=LAPTOP-NAGKEDNL\SQLEXPRESS;Database=arrombado ; Integrated Security=True;");
-        public Form1()
+        SqlConnection conexao = new SqlConnection(TinDev.Program.conexao);
+        public FrmVisualizarVagasDev()
         {
             InitializeComponent();
 
-            SqlCommand comando = new SqlCommand("SELECT tituloTrabalho, descricaoTrabalho, tipoSistema FROM vagas", conexao);
+            SqlCommand comando = new SqlCommand("SELECT tituloTrabalho, descricaoTrabalho, tipoSistema FROM TinDevVagas", conexao);
             SqlDataAdapter adaptador = new SqlDataAdapter();
             adaptador.SelectCommand = comando;
             DataTable tabela = new DataTable();
@@ -51,7 +51,7 @@ namespace minhatela
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrmVisualizarVagasDev_Load(object sender, EventArgs e)
         {
             
         }

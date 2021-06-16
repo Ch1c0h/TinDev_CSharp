@@ -1,12 +1,22 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
 namespace TinDev
 {
-    partial class FrmCadastrarSolicitacaoContratante
+    partial class FrmCadastrarSolicitacaoContratante : Form
     {
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -27,7 +37,7 @@ namespace TinDev
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.grpSistemas = new System.Windows.Forms.GroupBox();
             this.rdbInfra = new System.Windows.Forms.RadioButton();

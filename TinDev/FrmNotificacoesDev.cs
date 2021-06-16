@@ -40,8 +40,13 @@ namespace TinDev
         }
 
 
-
         public void Atualizar_Notificacoes(object sender, EventArgs e)
+        {
+            atualizar(); 
+        }
+
+
+        public void atualizar()
         {
             string strProvider = TinDev.Program.conexao;
 
@@ -70,14 +75,17 @@ namespace TinDev
 
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
 
-          
+
 
             DataTable notificacao = new DataTable();
 
             adaptador.Fill(notificacao);
 
             dtgNotificacao.DataSource = notificacao;
-
+        }
+        private void FrmNotificacoesDev_Shown(object sender, EventArgs e)
+        {
+            atualizar();
         }
     }
 }

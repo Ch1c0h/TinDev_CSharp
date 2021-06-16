@@ -465,7 +465,6 @@ namespace TinDev
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbNomeEmpresaContratante;
         private System.Windows.Forms.Button btnCancelarContratante;
-        private System.Windows.Forms.Button btnRegistrarContratante;
         private System.Windows.Forms.TextBox txbSenhaDev;
         private System.Windows.Forms.TextBox txbUsuarioDev;
         private System.Windows.Forms.TextBox txbEmailDev;

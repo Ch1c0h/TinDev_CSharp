@@ -59,12 +59,10 @@ namespace TinDev
 
         private void btnVisualizarVagasDisponíveis_Click(object sender, EventArgs e)
         {
-            using (var formPrincipal = new FrmVisualizarVagasDev())
-            {
-                this.Hide();
-                formPrincipal.Closed += (s, args) => this.Show();
-                formPrincipal.ShowDialog();
-            }
+            using var formPrincipal = new FrmVisualizarVagasDev();
+            this.Hide();
+            formPrincipal.Closed += (s, args) => this.Show();
+            formPrincipal.ShowDialog();
         }
 
         private void btnNotificacoes_Click(object sender, EventArgs e)
