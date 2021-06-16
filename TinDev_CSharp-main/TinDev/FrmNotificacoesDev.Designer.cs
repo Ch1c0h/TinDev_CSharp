@@ -1,7 +1,7 @@
 ﻿
 namespace TinDev
 {
-    partial class FrmVisualizarVagasDev
+    partial class FrmNotificacoesDev
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@ namespace TinDev
         {
             this.SuspendLayout();
             // 
-            // FrmVisualizarVagasDev
+            // FrmNotificacoesDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmVisualizarVagasDev";
+            this.Name = "FrmNotificacoesDev";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmVisualizarVagasDev";
+            this.Text = "FrmNotificacoesDev";
             this.ResumeLayout(false);
 
         }
