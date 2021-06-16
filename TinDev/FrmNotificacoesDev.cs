@@ -59,6 +59,7 @@ namespace TinDev
             con.Open();
 
 
+
             comando.CommandType = CommandType.Text;
 
             SqlDataAdapter adaptador = new SqlDataAdapter(comando);
