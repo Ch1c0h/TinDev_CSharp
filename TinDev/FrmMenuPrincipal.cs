@@ -96,5 +96,10 @@ namespace TinDev
                 formPrincipal.ShowDialog();
             }
         }
+
+        private void pnlGeral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

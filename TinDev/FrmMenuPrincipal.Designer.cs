@@ -59,6 +59,7 @@ namespace TinDev
             this.pnlGeral.Name = "pnlGeral";
             this.pnlGeral.Size = new System.Drawing.Size(1060, 739);
             this.pnlGeral.TabIndex = 0;
+            this.pnlGeral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGeral_Paint);
             // 
             // panel1
             // 
