@@ -13,10 +13,14 @@ namespace TinDev
 {
     public partial class FrmNotificacoesDev : Form
     {
+        
+       
+
         public FrmNotificacoesDev()
         {
             InitializeComponent();
         }
+
         public void FrmNotificacoesDev_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
@@ -35,45 +39,38 @@ namespace TinDev
             this.notifyIcon1.Visible = false;
         }
 
+
+
         public void Atualizar_Notificacoes(object sender, EventArgs e)
         {
-            string strProvider = TinDev.Program.conexao;
+            string strProvider = @"Data Source=DESKTOP-396MMQQ\SQLEXPRESS;
+                                    Integrated Security=True;Connect Timeout=30;
+                                    Encrypt=False;TrustServerCertificate=False;
+                                    ApplicationIntent=ReadWrite;
+                                    MultiSubnetFailover=False";
 
-            string strSql = " SELECT " +
-                            "  tituloTrabalho, " +
-                            "  descricaoTrabalho " +
-                            " FROM " +
-                            "  Interessados_vagas " +
-	                        "  join USUARIOS on " +
-                            "    USUARIOS.ID = Interessados_vagas.codInteressado  " +
-                            "  join TinDevVagas on " +
-		                    "    TinDevVagas.idvagas = codvaga " +
-                            " WHERE " + 
-	                        "   Interessados_vagas.codinteressado = @USUARIO and " + 
-	                        "  interessados_vagas.Aprovado = 'SIM' ";         
+            string strSql = @"SELECT v.tituloTrabalho, v.descricaoTrabalho
+                            FROM [dbo].[USUARIOS] as u, [dbo].[Interessados_vagas] as i, [dbo].[TinDevVagas] as v WHERE u.ID = i.codInteressado AND i.CodVaga = v.idVagas AND i.Aprovado = 'sim'";
 
             SqlConnection con = new SqlConnection(strProvider);
 
             SqlCommand comando = new SqlCommand(strSql, con);
 
-            comando.Parameters.Add("@USUARIO", SqlDbType.Int).Value = Sessao.Instance.CodUsuario;
-
             con.Open();
+
 
             comando.CommandType = CommandType.Text;
 
-            SqlDataAdapter adaptador = new SqlDataAdapter(comando);          
+            SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+
+          
 
             DataTable notificacao = new DataTable();
 
             adaptador.Fill(notificacao);
 
             dtgNotificacao.DataSource = notificacao;
-        }
 
-        private void FrmNotificacoesDev_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
