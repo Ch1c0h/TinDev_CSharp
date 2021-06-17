@@ -80,20 +80,20 @@ namespace TinDev
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Lt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(223, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 29);
+            this.label1.Size = new System.Drawing.Size(249, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "VAGAS DISPONÍVEIS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Lt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(239, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 14);
+            this.label2.Size = new System.Drawing.Size(203, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Clique duas vezes para ver detalhes";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -101,10 +101,10 @@ namespace TinDev
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Lt", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(275, 296);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 29);
+            this.label3.Size = new System.Drawing.Size(139, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "DETALHES";
             // 
@@ -188,7 +188,10 @@ namespace TinDev
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVisualizarVagasDev";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVisualizarVagasDev";
             this.Load += new System.EventHandler(this.FrmVisualizarVagasDev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

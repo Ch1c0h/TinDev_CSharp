@@ -223,7 +223,7 @@ namespace TinDev
 
         private void FrmVisualizarInteressadosContratante_Shown(object sender, EventArgs e)
         {
-            retornoBd();
+
         }
     }
     }

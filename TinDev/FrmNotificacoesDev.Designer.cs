@@ -34,8 +34,6 @@ namespace TinDev
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.btnNotificacoes = new System.Windows.Forms.Button();
             this.dtgNotificacao = new System.Windows.Forms.DataGridView();
-            this.Trabalho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNotificacao)).BeginInit();
             this.SuspendLayout();
@@ -63,30 +61,13 @@ namespace TinDev
             this.dtgNotificacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgNotificacao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgNotificacao.ColumnHeadersHeight = 40;
-            this.dtgNotificacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Trabalho,
-            this.Descrição});
             this.dtgNotificacao.GridColor = System.Drawing.SystemColors.Control;
-            this.dtgNotificacao.Location = new System.Drawing.Point(29, 111);
+            this.dtgNotificacao.Location = new System.Drawing.Point(30, 108);
             this.dtgNotificacao.Name = "dtgNotificacao";
             this.dtgNotificacao.RowTemplate.Height = 25;
             this.dtgNotificacao.Size = new System.Drawing.Size(743, 309);
             this.dtgNotificacao.TabIndex = 1;
             this.dtgNotificacao.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgNotificacao_CellFormatting);
-            // 
-            // Trabalho
-            // 
-            this.Trabalho.HeaderText = "Trabalho";
-            this.Trabalho.MinimumWidth = 200;
-            this.Trabalho.Name = "Trabalho";
-            this.Trabalho.Width = 300;
-            // 
-            // Descrição
-            // 
-            this.Descrição.HeaderText = "Descrição";
-            this.Descrição.MinimumWidth = 200;
-            this.Descrição.Name = "Descrição";
-            this.Descrição.Width = 400;
             // 
             // label1
             // 
@@ -123,8 +104,6 @@ namespace TinDev
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Button btnNotificacoes;
         private System.Windows.Forms.DataGridView dtgNotificacao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Trabalho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descrição;
         private System.Windows.Forms.Label label1;
     }
 }

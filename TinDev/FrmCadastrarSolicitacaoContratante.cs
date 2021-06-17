@@ -36,6 +36,7 @@ namespace TinDev
             comando.Parameters.Add("@descricao_trabalho", SqlDbType.VarChar).Value = campoDescricaoTrabalho.Text;
             comando.Parameters.Add("@titulo_trabalho", SqlDbType.VarChar).Value = campoTituloTrabalho.Text;
 
+
             if (rdbNaoInformaContratante.Checked)
             {
                 comando.Parameters.Add("@TIPO_SISTEMA", SqlDbType.VarChar).Value = "Tipo de sistema não informado";
@@ -57,15 +58,7 @@ namespace TinDev
                 comando.Parameters.Add("@TIPO_SISTEMA", SqlDbType.VarChar).Value = "Sistema Híbrido";
             }
 
-            if (rdbInformaContratante.Checked)
-            {
                 comando.Parameters.Add("@CONTRATANTE", SqlDbType.Int).Value = Sessao.Instance.CodUsuario;
-            }
-            else if (rdbNaoInformaContratante.Checked)
-            {
-                comando.Parameters.Add("@CONTRATANTE", SqlDbType.Int).Value = Sessao.Instance.CodUsuario;
-            }
-
             try
             {
                 sqlcon.Open();
