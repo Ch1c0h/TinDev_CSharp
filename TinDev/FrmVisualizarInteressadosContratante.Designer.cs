@@ -279,6 +279,7 @@ namespace TinDev
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Volta";
             this.Load += new System.EventHandler(this.FrmVisualizarInteressadosContratante_Load);
+            this.Shown += new System.EventHandler(this.FrmVisualizarInteressadosContratante_Shown);
             this.ClVagas.ResumeLayout(false);
             this.ClVagas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TelaVagas)).EndInit();

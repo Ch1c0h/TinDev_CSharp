@@ -162,10 +162,15 @@ namespace TinDev
         {
             String conexao = TinDev.Program.conexao;
 
-            string retornoBd = "select tb1.idVagas, tb1.tituloTrabalho " +
-                                "from  TinDevVagas tb1 " +
-                                "join Interessados_vagas tb2 on tb2.CodVaga = tb1.idContratante " +
-                                "where  tb2.CodVaga  = @USUARIO  "; 
+            string retornoBd = "select " +
+                               "  idVagas, " +
+                               "  tituloTrabalho " +
+                               "from  " +
+                               "  TinDevVagas  " +
+                               "join Interessados_vagas on " +
+                               "  TinDevVagas.CodVaga = Interessados_vagas.idContratante " +
+                               "where  " +
+                               "  Interessados_vagas.CodVaga  = @USUARIO  "; 
                             
 
      
@@ -194,12 +199,8 @@ namespace TinDev
 
         private void button1_Click_4(object sender, EventArgs e)
         {
-
             retornoBd();
-
-            ClVagas.Visible = true;
-            
-
+            ClVagas.Visible = true;         
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -218,6 +219,11 @@ namespace TinDev
         private void Interessado_Click(object sender, EventArgs e)
         {
             Click();
+        }
+
+        private void FrmVisualizarInteressadosContratante_Shown(object sender, EventArgs e)
+        {
+            retornoBd();
         }
     }
     }
