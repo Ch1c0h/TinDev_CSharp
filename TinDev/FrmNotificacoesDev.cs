@@ -14,8 +14,6 @@ namespace TinDev
     public partial class FrmNotificacoesDev : Form
     {
         
-       
-
         public FrmNotificacoesDev()
         {
             InitializeComponent();
@@ -86,6 +84,16 @@ namespace TinDev
         private void FrmNotificacoesDev_Shown(object sender, EventArgs e)
         {
             atualizar();
+        }
+
+        private void dtgNotificacao_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(e.Value != null && e.ColumnIndex == 0)
+            {
+                DataGridViewRow row = dtgNotificacao.Rows[e.RowIndex];
+
+                row.DefaultCellStyle.ForeColor = Color.DarkBlue;
+            }
         }
     }
 }
