@@ -78,8 +78,10 @@ namespace TinDev
             DataTable notificacao = new DataTable();
 
             adaptador.Fill(notificacao);
-
             dtgNotificacao.DataSource = notificacao;
+
+            dtgNotificacao.Columns[0].HeaderText = "Título";
+            dtgNotificacao.Columns[1].HeaderText = "Descrição";
         }
         private void FrmNotificacoesDev_Shown(object sender, EventArgs e)
         {

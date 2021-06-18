@@ -57,10 +57,13 @@ namespace TinDev
             // 
             // dtgNotificacao
             // 
+            this.dtgNotificacao.AllowUserToAddRows = false;
+            this.dtgNotificacao.AllowUserToDeleteRows = false;
+            this.dtgNotificacao.AllowUserToResizeRows = false;
+            this.dtgNotificacao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgNotificacao.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dtgNotificacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgNotificacao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dtgNotificacao.ColumnHeadersHeight = 40;
             this.dtgNotificacao.GridColor = System.Drawing.SystemColors.Control;
             this.dtgNotificacao.Location = new System.Drawing.Point(30, 108);
             this.dtgNotificacao.Name = "dtgNotificacao";
